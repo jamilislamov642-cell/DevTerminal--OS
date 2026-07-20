@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTerminal OS - Terminal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/terminal.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="terminal-page">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">▲ DevTerminal</div>
+            <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item" data-page="dashboard">
+                <span class="nav-icon">📊</span>
+                <span class="nav-label">Dashboard</span>
+            </a>
+            <a href="terminal.html" class="nav-item active" data-page="terminal">
+                <span class="nav-icon">💻</span>
+                <span class="nav-label">Terminal</span>
+            </a>
+            <a href="explorer.html" class="nav-item" data-page="explorer">
+                <span class="nav-icon">📁</span>
+                <span class="nav-label">File Explorer</span>
+            </a>
+            <a href="#" class="nav-item" data-page="editor">
+                <span class="nav-icon">✏️</span>
+                <span class="nav-label">Editor</span>
+            </a>
+            <a href="#" class="nav-item" data-page="settings">
+                <span class="nav-icon">⚙️</span>
+                <span class="nav-label">Settings</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button class="btn-logout" id="logoutBtn">Logout</button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Topbar -->
+        <div class="topbar">
+            <div class="topbar-left">
+                <h1>Terminal</h1>
+            </div>
+        </div>
+
+        <!-- Terminal Container -->
+        <div class="terminal-container">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <span class="terminal-title">devterminal@localhost:~</span>
+                    <div class="terminal-buttons">
+                        <button class="btn-min">−</button>
+                        <button class="btn-max">□</button>
+                        <button class="btn-close">✕</button>
+                    </div>
+                </div>
+                <div class="terminal-body" id="terminalBody">
+                    <div class="terminal-line">
+                        <span class="prompt">devterminal@localhost:~$ </span>
+                        <span class="command">Welcome to DevTerminal OS</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="prompt">devterminal@localhost:~$ </span>
+                        <span class="command">Type 'help' for available commands</span>
+                    </div>
+                </div>
+                <div class="terminal-input-line">
+                    <span class="prompt">devterminal@localhost:~$ </span>
+                    <input type="text" id="terminalInput" class="terminal-input" placeholder="">
+                </div>
+            </div>
+
+            <!-- Command History -->
+            <div class="command-history">
+                <h3>Command History</h3>
+                <div class="history-list" id="historyList"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/terminal.js"></script>
+</body>
+</html>

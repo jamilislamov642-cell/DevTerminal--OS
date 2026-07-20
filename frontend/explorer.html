@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTerminal OS - File Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/explorer.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="explorer-page">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">▲ DevTerminal</div>
+            <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item" data-page="dashboard">
+                <span class="nav-icon">📊</span>
+                <span class="nav-label">Dashboard</span>
+            </a>
+            <a href="terminal.html" class="nav-item" data-page="terminal">
+                <span class="nav-icon">💻</span>
+                <span class="nav-label">Terminal</span>
+            </a>
+            <a href="explorer.html" class="nav-item active" data-page="explorer">
+                <span class="nav-icon">📁</span>
+                <span class="nav-label">File Explorer</span>
+            </a>
+            <a href="#" class="nav-item" data-page="editor">
+                <span class="nav-icon">✏️</span>
+                <span class="nav-label">Editor</span>
+            </a>
+            <a href="#" class="nav-item" data-page="settings">
+                <span class="nav-icon">⚙️</span>
+                <span class="nav-label">Settings</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-shortcuts">
+            <p class="shortcuts-title">Quick Access</p>
+            <a href="#" class="shortcut" data-path="/home">Home</a>
+            <a href="#" class="shortcut" data-path="/documents">Documents</a>
+            <a href="#" class="shortcut" data-path="/downloads">Downloads</a>
+            <a href="#" class="shortcut" data-path="/projects">Projects</a>
+        </div>
+
+        <div class="sidebar-footer">
+            <button class="btn-logout" id="logoutBtn">Logout</button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Topbar -->
+        <div class="topbar">
+            <div class="topbar-left">
+                <button class="btn-back" id="backBtn">← Back</button>
+                <div class="breadcrumb" id="breadcrumb"></div>
+            </div>
+            <div class="topbar-right">
+                <button class="btn-new-folder" id="newFolderBtn">+ Folder</button>
+                <button class="btn-new-file" id="newFileBtn">+ File</button>
+            </div>
+        </div>
+
+        <!-- Explorer Container -->
+        <div class="explorer-container">
+            <div class="file-list" id="fileList"></div>
+        </div>
+    </main>
+
+    <!-- Context Menu -->
+    <div class="context-menu" id="contextMenu">
+        <a href="#" class="context-item" data-action="open">Open</a>
+        <a href="#" class="context-item" data-action="rename">Rename</a>
+        <a href="#" class="context-item" data-action="copy">Copy</a>
+        <a href="#" class="context-item" data-action="move">Move</a>
+        <a href="#" class="context-item" data-action="delete">Delete</a>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/explorer.js"></script>
+</body>
+</html>

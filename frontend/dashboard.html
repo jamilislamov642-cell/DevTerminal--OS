@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTerminal OS - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="dashboard-page">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">▲ DevTerminal</div>
+            <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active" data-page="dashboard">
+                <span class="nav-icon">📊</span>
+                <span class="nav-label">Dashboard</span>
+            </a>
+            <a href="#" class="nav-item" data-page="terminal">
+                <span class="nav-icon">💻</span>
+                <span class="nav-label">Terminal</span>
+            </a>
+            <a href="#" class="nav-item" data-page="explorer">
+                <span class="nav-icon">📁</span>
+                <span class="nav-label">File Explorer</span>
+            </a>
+            <a href="#" class="nav-item" data-page="editor">
+                <span class="nav-icon">✏️</span>
+                <span class="nav-label">Editor</span>
+            </a>
+            <a href="#" class="nav-item" data-page="settings">
+                <span class="nav-icon">⚙️</span>
+                <span class="nav-label">Settings</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button class="btn-logout" id="logoutBtn">Logout</button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Topbar -->
+        <div class="topbar">
+            <div class="topbar-left">
+                <h1 id="pageTitle">Dashboard</h1>
+            </div>
+            <div class="topbar-right">
+                <div class="topbar-user">
+                    <span id="username">User</span>
+                    <img src="https://via.placeholder.com/40" alt="Avatar" class="avatar">
+                </div>
+            </div>
+        </div>
+
+        <!-- Page Container -->
+        <div class="page-container">
+            <!-- Dashboard Page -->
+            <div class="page" id="dashboard-page" data-page="dashboard">
+                <div class="dashboard-grid">
+                    <div class="card cpu-card">
+                        <div class="card-header">CPU Usage</div>
+                        <div class="card-value" id="cpuValue">0%</div>
+                        <div class="card-bar">
+                            <div class="bar-fill" id="cpuBar" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="card ram-card">
+                        <div class="card-header">RAM Usage</div>
+                        <div class="card-value" id="ramValue">0%</div>
+                        <div class="card-bar">
+                            <div class="bar-fill" id="ramBar" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="card disk-card">
+                        <div class="card-header">Disk Usage</div>
+                        <div class="card-value" id="diskValue">0%</div>
+                        <div class="card-bar">
+                            <div class="bar-fill" id="diskBar" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="card network-card">
+                        <div class="card-header">Network</div>
+                        <div class="card-value" id="networkStatus">Connected</div>
+                        <div class="card-subtext" id="networkSpeed">Speed: 0 Mbps</div>
+                    </div>
+
+                    <div class="card system-card">
+                        <div class="card-header">System Info</div>
+                        <div class="system-info">
+                            <div class="info-row">
+                                <span>Uptime:</span>
+                                <span id="uptime">0h 0m</span>
+                            </div>
+                            <div class="info-row">
+                                <span>OS:</span>
+                                <span>Linux</span>
+                            </div>
+                            <div class="info-row">
+                                <span>Kernel:</span>
+                                <span>5.10.0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card clock-card">
+                        <div class="card-header">System Time</div>
+                        <div class="card-value" id="systemTime">00:00:00</div>
+                        <div class="card-date" id="systemDate">Jan 01, 2024</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terminal Page -->
+            <div class="page" id="terminal-page" data-page="terminal"></div>
+
+            <!-- File Explorer Page -->
+            <div class="page" id="explorer-page" data-page="explorer"></div>
+
+            <!-- Editor Page -->
+            <div class="page" id="editor-page" data-page="editor"></div>
+
+            <!-- Settings Page -->
+            <div class="page" id="settings-page" data-page="settings"></div>
+        </div>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

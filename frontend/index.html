@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTerminal OS - Boot</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="boot-screen">
+    <div class="boot-container">
+        <div class="boot-content">
+            <div class="boot-logo">▲ DevTerminal OS</div>
+            <div class="boot-logs">
+                <div class="boot-log">Loading kernel...</div>
+                <div class="boot-log">Loading drivers...</div>
+                <div class="boot-log">Checking hardware...</div>
+                <div class="boot-log">Starting services...</div>
+                <div class="boot-log">Mounting filesystem...</div>
+                <div class="boot-log">Initializing database...</div>
+                <div class="boot-log">Loading network...</div>
+                <div class="boot-log">Authenticating user...</div>
+                <div class="boot-log final">Launching desktop...</div>
+            </div>
+            <div class="boot-progress">
+                <div class="boot-progress-bar"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/boot.js"></script>
+</body>
+</html>
